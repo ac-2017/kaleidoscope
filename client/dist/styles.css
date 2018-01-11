@@ -1,0 +1,57 @@
+body {
+  margin:0;
+	height: 100%;
+  font-family: 'Roboto', sans-serif;
+	/*position:absolute;*/
+}
+
+.app {
+	position:relative;
+	/*background-color:white;*/
+	height: 98vh;
+  /*padding:10px;*/
+}
+
+.title {
+	/*position: relative;*/
+	font-size: 2em;
+	height: 5%;
+  width:100%;
+  background-color:rgba(236, 240, 241, .6);
+  margin-bottom:1vh;
+}
+
+.dashboard {
+  padding:2vh;
+}
+
+.lt-container {
+	/*background-color:grey;*/
+  width: 100%;
+  padding-top:4vh;
+}
+
+.lt-body {
+  border-radius:1em;
+  background-color:rgba(236, 240, 241, .5);
+}
+
+.time {
+  text-align:center;
+}
+
+.timer {
+  font-size:4em;
+}
+
+.weather {
+  text-align:center;
+}
+
+.calendar {
+  text-align:center;
+}
+
+.mail {
+  text-align:center;
+}

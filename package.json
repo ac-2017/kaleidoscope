@@ -1,5 +1,5 @@
 {
-  "name": "Re:Start",
+  "name": "Restart",
   "version": "1.0.0",
   "description": "Re:Start Dashboard",
   "main": "index.js",
@@ -8,7 +8,11 @@
     "server-dev": "nodemon server/index.js"
   },
   "author": "Aaron Chan",
-  "license": "Apache 2.0",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ac-2017/re-start.git"
+  },
   "devDependencies": {
     "babel-core": "^6.23.1",
     "babel-loader": "^6.3.2",
@@ -20,6 +24,7 @@
     "body-parser": "^1.17.2",
     "express": "^4.15.0",
     "jquery": "^3.1.1",
+    "layout-grid": "^2.2.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "request": "^2.83.0"

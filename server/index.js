@@ -1,6 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var request = require('request')
+//require('layout-grid/dist/css/layout-grid.min.css')
 var app = express();
 
 app.use(express.static(__dirname + '/../client/dist'));
