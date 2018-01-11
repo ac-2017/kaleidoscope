@@ -3,6 +3,22 @@ import React from 'react';
 class Time extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {
+      time: '',
+      date: ''
+    }
+  }
+
+  componentWillMount() {
+    setInterval(() => {
+      var currentDate = new Date();
+      var currentDay = currentDate.toDateString()
+      var dateTime = currentDate.getHours() + ':' + (JSON.stringify(currentDate.getMinutes()).length === 2 ? currentDate.getMinutes() : '0' + currentDate.getMinutes()) + ':' + (JSON.stringify(currentDate.getSeconds()).length === 2 ? currentDate.getSeconds() : '0' + currentDate.getSeconds())
+      this.setState({
+        time: dateTime,
+        date: currentDay
+      })
+    },1000)
   }
 
   render() {
@@ -22,11 +38,11 @@ class Time extends React.Component {
             lt-md-y-0
             lt-md-w-1
             lt-md-h-1
-            
+
             lt-lg-x-0
             lt-lg-y-0
             lt-lg-w-1
-            lt-lg-h-1"><div className="lt-body note"><h3>Time</h3><hr/><span className="timer">12 | 00</span></div></div>
+            lt-lg-h-1"><div className="lt-body note"><h3>Time</h3><hr/><span className="timer">{this.state.time}</span><br/><span className="date">{this.state.date}</span></div></div>
     )
   }
 

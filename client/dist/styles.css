@@ -2,6 +2,7 @@ body {
   margin:0;
 	height: 100%;
   font-family: 'Roboto', sans-serif;
+  color:#34495e;
 	/*position:absolute;*/
 }
 
@@ -13,12 +14,13 @@ body {
 }
 
 .title {
-	/*position: relative;*/
+	position: relative;
 	font-size: 2em;
 	height: 5%;
-  width:100%;
-  background-color:rgba(236, 240, 241, .6);
-  margin-bottom:1vh;
+  /*width:100%;*/
+  padding-left:1em;
+  background-color:rgba(236, 240, 241, .9);
+  /*margin-bottom:1vh;*/
 }
 
 .dashboard {
@@ -29,23 +31,32 @@ body {
 	/*background-color:grey;*/
   width: 100%;
   padding-top:4vh;
+  font-size:1em;
 }
 
 .lt-body {
   border-radius:1em;
-  background-color:rgba(236, 240, 241, .5);
+  background-color:rgba(236, 240, 241, .8);
 }
 
 .time {
   text-align:center;
+  /*font-size: 1em;*/
+  position:relative;
 }
 
 .timer {
+  position:relative;
   font-size:4em;
+}
+
+.date {
+  font-size:2em;
 }
 
 .weather {
   text-align:center;
+  /*background-color:bla*/
 }
 
 .calendar {
@@ -54,4 +65,12 @@ body {
 
 .mail {
   text-align:center;
+}
+
+.news {
+  text-align:center;
+}
+
+.headlines {
+  text-align:left;
 }

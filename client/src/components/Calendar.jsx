@@ -11,7 +11,7 @@ class Calendar extends React.Component {
             lt-xs-x-0
             lt-xs-y-3
             lt-xs-w-1
-            lt-xs-h-2
+            lt-xs-h-1
 
             lt-sm-x-0
             lt-sm-y-1
