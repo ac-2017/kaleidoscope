@@ -3,6 +3,7 @@ import React from 'react';
 class News extends React.Component {
   constructor(props) {
     super(props)
+    console.log(this.props.articles)
   }
 
   render() {
@@ -16,7 +17,7 @@ class News extends React.Component {
             lt-sm-x-0
             lt-sm-y-3
             lt-sm-w-2
-            lt-sm-h-2
+            lt-sm-h-3
 
             lt-md-x-2
             lt-md-y-0
@@ -26,10 +27,20 @@ class News extends React.Component {
             lt-lg-x-2
             lt-lg-y-0
             lt-lg-w-2
-            lt-lg-h-3"><div className="lt-body note"><h3>News</h3><hr/><ul className="headlines"><li>news 1</li><li>news 2</li></ul></div></div>
+            lt-lg-h-3"><div className="lt-body note"><h3>News</h3><hr/>
+            <ul className="headlines">
+              {this.props.articles.map((article,idx) => {
+                return (<NewsArticle article={article} key={idx}/>)
+              })}
+            </ul>
+            </div>
+            </div>
     )
   }
+}
 
+const NewsArticle = (props) => {
+  return (<li className="article"><a className="articleTitle" href={props.article.url} target="_blank">{props.article.title}</a><span className="articleTime">{(new Date(props.article.publishedAt)).toString().split(' GMT')[0].split(' 2018 ').join(' ')}</span><hr/></li>)
 }
 
 export default News

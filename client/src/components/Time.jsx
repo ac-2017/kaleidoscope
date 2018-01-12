@@ -7,18 +7,24 @@ class Time extends React.Component {
       time: '',
       date: ''
     }
+    this.tickTock = this.tickTock.bind(this)
   }
 
   componentWillMount() {
+    this.tickTock()
     setInterval(() => {
-      var currentDate = new Date();
-      var currentDay = currentDate.toDateString()
-      var dateTime = currentDate.getHours() + ':' + (JSON.stringify(currentDate.getMinutes()).length === 2 ? currentDate.getMinutes() : '0' + currentDate.getMinutes()) + ':' + (JSON.stringify(currentDate.getSeconds()).length === 2 ? currentDate.getSeconds() : '0' + currentDate.getSeconds())
-      this.setState({
-        time: dateTime,
-        date: currentDay
-      })
+      this.tickTock()
     },1000)
+  }
+
+  tickTock() {
+    var currentDate = new Date();
+    var currentDay = currentDate.toDateString()
+    var dateTime = currentDate.getHours() + ':' + (JSON.stringify(currentDate.getMinutes()).length === 2 ? currentDate.getMinutes() : '0' + currentDate.getMinutes()) + ':' + (JSON.stringify(currentDate.getSeconds()).length === 2 ? currentDate.getSeconds() : '0' + currentDate.getSeconds())
+    this.setState({
+      time: dateTime,
+      date: currentDay
+    })
   }
 
   render() {
@@ -42,7 +48,7 @@ class Time extends React.Component {
             lt-lg-x-0
             lt-lg-y-0
             lt-lg-w-1
-            lt-lg-h-1"><div className="lt-body note"><h3>Time</h3><hr/><span className="timer">{this.state.time}</span><br/><span className="date">{this.state.date}</span></div></div>
+            lt-lg-h-1"><div className="lt-body note"><h3>Time</h3><hr/><br/><span className="timer">{this.state.time}</span><br/><span className="date">{this.state.date}</span></div></div>
     )
   }
 

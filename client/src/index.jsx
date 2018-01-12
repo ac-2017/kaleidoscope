@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
+import axios from 'axios';
 
 import Time from './components/Time.jsx'
 import Weather from './components/Weather.jsx'
 import Calendar from './components/Calendar.jsx'
 import Mail from './components/Mail.jsx'
 import News from './components/News.jsx'
+import Settings from './components/Settings.jsx'
 // import AnyComponent from './components/filename.jsx'
 
 class App extends React.Component {
@@ -14,9 +16,11 @@ class App extends React.Component {
     super(props)
     this.state = {
       greeting: '',
-      weather: {}
+      weather: {},
+      news: []
     }
     this.getWeather = this.getWeather.bind(this)
+    this.getNews = this.getNews.bind(this)
   }
 
   componentWillMount() {
@@ -34,28 +38,47 @@ class App extends React.Component {
         greeting: 'Good Morning'
       })
     }
+    this.getNews()
+    setInterval(() => {
+      this.getNews()
+    },300000)
   }
 
   getWeather() {
-    axios.get('/weather').then(() => {
-      
+    axios.get('/weather')
+    .then((response) => {
+      this.setState({
+
+      })
     })
   }
 
+  getNews() {
+    axios.get('/news')
+    .then((response) => {
+      console.log(response)
+      this.setState({
+        news: response.data
+      })
+    })
+  }
 
   render () {
     return (
       <div className="app">
-        <div className="title"><span>{this.state.greeting}</span></div>
-        <div className="dashboard">
+        {/*<div className="title"><span>{this.state.greeting}</span></div>*/}
+        <div id="dashboard">
         <div className="lt-container lt-xs-h-6 lt-sm-h-5 lt-md-h-3 lt-lg-h-3">
           <Time/>
           <Weather/>
+          <Settings/>
           <Calendar/>
           <Mail/>
-          <News/>
+          <News articles={this.state.news}/>
         </div>
+
         </div>
+      {/*<div className="title"><span>{this.state.greeting}</span></div>*/}
       </div>
     )
   }
