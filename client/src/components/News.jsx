@@ -3,7 +3,7 @@ import React from 'react';
 class News extends React.Component {
   constructor(props) {
     super(props)
-    console.log(this.props.articles)
+    // console.log(this.props.articles)
   }
 
   render() {
@@ -27,7 +27,7 @@ class News extends React.Component {
             lt-lg-x-2
             lt-lg-y-0
             lt-lg-w-2
-            lt-lg-h-3"><div className="lt-body note"><h3>News</h3><hr/>
+            lt-lg-h-3"><div className="lt-body note" style={{backgroundColor: this.props.color}}><h3>News</h3><hr/>
             <ul className="headlines">
               {this.props.articles.map((article,idx) => {
                 return (<NewsArticle article={article} key={idx}/>)

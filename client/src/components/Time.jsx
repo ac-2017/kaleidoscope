@@ -48,7 +48,7 @@ class Time extends React.Component {
             lt-lg-x-0
             lt-lg-y-0
             lt-lg-w-1
-            lt-lg-h-1"><div className="lt-body note"><h3>Time</h3><hr/><br/><span className="timer">{this.state.time}</span><br/><span className="date">{this.state.date}</span></div></div>
+            lt-lg-h-1"><div className="lt-body note" style={{backgroundColor: this.props.color}}><h3>Time</h3><hr/><br/><span className="timer">{this.state.time}</span><br/><span className="date">{this.state.date}</span></div></div>
     )
   }
 

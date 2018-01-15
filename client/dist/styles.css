@@ -9,7 +9,7 @@ body {
   width:100%;
   font-family: 'Roboto', sans-serif;
   /*comment in for windows ui*/
-  color:#ecf0f1; 
+  /*color:#ecf0f1; */
 	/*position:absolute;*/
 }
 
@@ -57,7 +57,7 @@ a {
   /*height:40px;*/
   /*background-color:green;*/
   padding-top:2vh;
-  font-size:1em;
+  font-size:1em; 
 }
 
 .lt-body {
@@ -98,9 +98,73 @@ a {
   /*background-color:bla*/
 }
 
+.forecast {
+  display: inline-block;
+}
+
+.description {
+  float:left;
+  margin-left:1em;
+  font-size:3vh;
+}
+
+.temperature {
+  float:right;
+  margin-right:1em;
+  font-size:3vh;
+}
+
+.humidity {
+  float:left;
+  margin-left:1em;
+  margin-top:1em;
+  font-size:3vh;
+}
+
+.windspeed {
+  float:right;
+  /*clear:both;*/
+  margin-right:1em;
+  margin-top:1em;
+  font-size:2.5vh;
+}
 .calendar {
   text-align:center;
 }
+
+.events {
+  position: relative;
+  text-align:left;
+  list-style: none;
+  /*width: 100%;*/
+  padding:0;
+  height: 80%;
+  /*background-color:green;*/
+}
+
+.event {
+  width:96%;
+  height:5%;
+  display: block;
+  text-overflow: ellipsis;
+  float:left;
+  padding-left:2%;
+  padding-right:2%;
+  /*overflow: hidden;*/
+  padding-bottom: 1%;
+  position: relative;
+  /*background-color: white;*/
+  white-space: nowrap;
+}
+
+.eventStart {
+  display:inline-block;
+  float:left;
+  /*width:20%;*/
+  padding-right:1em;
+  /*overflow:hidden;*/
+  position:relative;
+} 
 
 .mail {
   text-align:center;
@@ -157,7 +221,7 @@ hr {
   margin:0;
 }
 
-button {
+button{
   background: #2ecc71;
   color: #fff;
   border: 0;
@@ -171,13 +235,14 @@ button {
   padding: 12px 36px;
 }
 
-button:hover {
+button:hover{
   background: darken(#2ecc71, 10%);
   position: relative;
   top:-1px;
   box-shadow: -1px 1px 2px 1px rgba(255, 255, 255, .3);
 }
 
-button:active {
+button:active{
   box-shadow: inset 0 0 10px 2px rgba(255, 255, 255, .2);
 }
+

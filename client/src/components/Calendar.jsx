@@ -26,10 +26,20 @@ class Calendar extends React.Component {
             lt-lg-x-1
             lt-lg-y-0
             lt-lg-w-1
-            lt-lg-h-2"><div className="lt-body note"><h3>Calendar</h3><hr/><span className="events">6 upcoming events</span></div></div>
+            lt-lg-h-2"><div className="lt-body note" style={{backgroundColor: this.props.color}}><h3>Calendar</h3><hr/>
+            <ul className="events">
+              {this.props.events.map((event,idx) => {
+                return (<EventName event={event} key={idx}/>)
+              })}
+            </ul>
+            </div></div>
     )
   }
 
+}
+
+const EventName = (props) => {
+  return (<li className="event"><span className="eventStart">{props.event.start.dateTime.toString().split('T')[1].split('-')[0]}</span><span className="eventName">{props.event.summary}</span><hr/></li>)
 }
 
 export default Calendar

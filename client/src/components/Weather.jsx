@@ -26,7 +26,13 @@ class Weather extends React.Component {
             lt-lg-x-0
             lt-lg-y-1
             lt-lg-w-1
-            lt-lg-h-1"><div className="lt-body note"><h3>Weather</h3><hr/></div></div>
+            lt-lg-h-1"><div className="lt-body note" style={{backgroundColor: this.props.color}}><h3>Weather</h3><hr/><br/>
+            <span className="forecast description">{this.props.forecast.weather}</span>
+            <span className="forecast temperature">{this.props.forecast.temp_f + '°F'}</span>
+            <br/><br/>
+            <span className="forecast humidity">{this.props.forecast.relative_humidity + ' humidity'}</span>
+            <span className="forecast windspeed">{'💨' + this.props.forecast.wind_mph + 'mph'}</span>
+            </div></div>
       )
   }
 }

@@ -26,7 +26,7 @@ class Mail extends React.Component {
             lt-lg-x-1
             lt-lg-y-2
             lt-lg-w-1
-            lt-lg-h-1"><div className="lt-body note"><h3>Mail</h3><hr/><span className="events">12 new messages</span></div></div>
+            lt-lg-h-1"><div className="lt-body note" style={{backgroundColor: this.props.color}}><h3>Mail</h3><hr/><span className="events">12 new messages</span></div></div>
     )
   }
 
