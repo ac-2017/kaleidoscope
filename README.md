@@ -1,4 +1,7 @@
-# Re:Start
+# Kaleidoscope Dashboard
+
+Note: This is an archived project. Please allow a moment for the server to spin up. 
+https://kaleidoscope-dash.herokuapp.com
 
 #### Table of Contents
 - [Overview](#overview)
