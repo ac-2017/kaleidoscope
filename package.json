@@ -11,7 +11,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/ac-2017/re-start.git"
+    "url": "https://github.com/ac-2017/kaleidoscope.git"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",
