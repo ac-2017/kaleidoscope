@@ -1,7 +1,7 @@
 {
-  "name": "Restart",
+  "name": "Kaleidoscope",
   "version": "1.0.0",
-  "description": "Re:Start Dashboard",
+  "description": "Kaleidoscope Dashboard",
   "main": "index.js",
   "scripts": {
     "react-dev": "webpack -d --watch",
